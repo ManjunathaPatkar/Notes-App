@@ -1,2 +1,4 @@
-const name='Manjunatha';
-console.log(name);
+function getNotes(){
+    return "Your notes...";
+}
+module.exports=getNotes();
