@@ -1,4 +1,4 @@
 this fule was created using node.js
 now i am appending to this file using appendfile method of file system
-Actua;;y i can append as many times i want
+Actually i can append as many times i want
 Each time i append new file wont be created and existing data wont be overridden
