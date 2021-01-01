@@ -5,6 +5,12 @@
 // fs.appendFileSync('notes.txt','Each time i append new file wont be created and existing data wont be overridden\n');
 const a=require('./notes');
 const validator=require('validator');
+const chalk=require('chalk');
 console.log(a());
 // console.log(validator.isEmail('g@gilom.'));
-console.log(validator.isURL('oglcom'))
+console.log(validator.isURL('oglcom'));
+console.log(chalk.green('success!!'));
+console.log(chalk.red('Failed'));
+console.log(chalk.yellow('processing'));
+console.log(chalk.red.bgCyanBright.bold('fail'));
+console.log(chalk.red.inverse.bgCyan('Lol'))
