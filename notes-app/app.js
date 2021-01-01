@@ -6,4 +6,5 @@
 const a=require('./notes');
 const validator=require('validator');
 console.log(a());
-console.log(validator.isEmail('manjunathapatkar150@gmail.com'));
+// console.log(validator.isEmail('g@gilom.'));
+console.log(validator.isURL('oglcom'))
