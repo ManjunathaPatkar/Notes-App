@@ -4,4 +4,6 @@
 // fs.appendFileSync('notes.txt','Actua;;y i can append as many times i want\n');
 // fs.appendFileSync('notes.txt','Each time i append new file wont be created and existing data wont be overridden\n');
 const a=require('./notes');
+const validator=require('validator');
 console.log(a());
+console.log(validator.isEmail('manjunathapatkar150@gmail.com'));
