@@ -7,7 +7,7 @@ const b=JSON.stringify(a);
 console.log(b)
 const fs=require('fs')
 // fs.writeFileSync('a.txt', a)
-fs.writeFileSync('a.txt', b)
+fs.writeFileSync('a.json', b)
 const data=JSON.parse(b);
 console.log(data)
 console.log(data.title)
