@@ -15,8 +15,12 @@
 // event.printGuestlist()
 const event = {
     name: 'birthday party',
+    guestlist:['manja','ram','rahim','seeta'],
     printGuestlist() {
         console.log('guest list for bday partiess', this.name)
+        this.guestlist.forEach((guest)=>{
+            console.log(guest,'is attending for',this.name)
+        })
     }
 }
 event.printGuestlist()
