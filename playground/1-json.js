@@ -8,3 +8,6 @@ console.log(b)
 const fs=require('fs')
 // fs.writeFileSync('a.txt', a)
 fs.writeFileSync('a.txt', b)
+const data=JSON.parse(b);
+console.log(data)
+console.log(data.title)
