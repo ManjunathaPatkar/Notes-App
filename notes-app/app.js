@@ -5,6 +5,7 @@
 // fs.appendFileSync('notes.txt','Each time i append new file wont be created and existing data wont be overridden\n');
 const a=require('./notes');
 const fs=require('fs');
+const yargs=require('yargs');
 // const validator=require('validator');
 const chalk=require('chalk');
 console.log(a());
