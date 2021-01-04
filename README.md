@@ -1,2 +1,2 @@
 # Notes-App
-##Playground is used to check how various things works
+## Playground is used to check how various things works
