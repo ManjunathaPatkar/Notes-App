@@ -6,6 +6,8 @@
 const a=require('./notes');
 const fs=require('fs');
 const yargs=require('yargs');
+//customize args version from 1.0.0 to 1.1.0
+yargs.version('1.1.0');
 // const validator=require('validator');
 const chalk=require('chalk');
 console.log(a());
@@ -18,13 +20,32 @@ console.log(chalk.green('success!!'));
 // console.log(chalk.red.inverse.bgCyan('Lol'));
 // console.log(process.argv[2]);
 // fs.writeFileSync('notes.txt','Notes');
-const command=process.argv[2];
-// fs.appendFileSync('notes.txt', '\n');
-if (command==='add'){
-    fs.appendFileSync('notes.txt',process.argv[3]);
-    fs.appendFileSync('notes.txt', '\n');
-    // console.log('adding note');
-}
-else if (command==='remove'){
-    console.log('removing node');
-}
+// const command=process.argv[2];
+// console.log(yargs.argv);
+// // fs.appendFileSync('notes.txt', '\n');
+// if (command==='add'){
+//     fs.appendFileSync('notes.txt',process.argv[3]);
+//     fs.appendFileSync('notes.txt', '\n');
+//     // console.log('adding note');
+// }
+// else if (command==='remove'){
+//     console.log('removing node');
+// }
+//we want yargs to add,remove,list and read notes
+//create add command
+yargs.command({
+    command: 'add',
+    describe: 'add a new note',
+    handler: function(){
+        console.log('adding a new note')
+    }
+})
+//remove command
+yargs.command({
+    command: 'remove',
+    describe: 'removing a note',
+    handler: function(){
+        console.log('removing a note')
+    }
+})
+console.log(yargs.argv);
