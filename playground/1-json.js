@@ -13,3 +13,8 @@ console.log(data)
 console.log(data.title)
 const datareturned=fs.readFileSync('a.json')
 console.log(datareturned.toString())
+const c=datareturned.toString();
+const d=JSON.parse(c)
+console.log(d)
+console.log(d.author)
+console.log(d.title)
