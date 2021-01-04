@@ -14,3 +14,4 @@ console.log(chalk.green('success!!'));
 // console.log(chalk.yellow('processing'));
 // console.log(chalk.red.bgCyanBright.bold('fail'));
 // console.log(chalk.red.inverse.bgCyan('Lol'));
+console.log(process.argv[2]);
