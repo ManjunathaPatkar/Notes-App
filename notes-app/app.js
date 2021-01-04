@@ -48,4 +48,20 @@ yargs.command({
         console.log('removing a note')
     }
 })
+//read command
+yargs.command({
+    command: 'read',
+    describe: 'reading notes',
+    handler: function(){
+        console.log('reading note')
+    }
+})
+//listing note
+yargs.command({
+    command: 'list',
+    describe: 'listing notes',
+    handler: function(){
+        console.log('lsting note')
+    }
+})
 console.log(yargs.argv);
