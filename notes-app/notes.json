@@ -1,1 +1,14 @@
-[{"title":"shopping list","body":"hello this is the body of notes:\n"},{"title":"manja","body":"a simple person"},{"title":"patkar","body":"patkar awesome"}]
+[
+    {
+        "title": "shopping list",
+        "body": "hello this is the body of notes:\n"
+    },
+    {
+        "title": "manja",
+        "body": "a simple person"
+    },
+    {
+        "title": "patkar",
+        "body": "patkar awesome"
+    }
+]

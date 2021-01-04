@@ -65,10 +65,21 @@ const listNotes=()=>{
         console.log(chalk.inverse(note.title))
     })
 }
+const readNote=(title)=>{
+    const data=loadNotes();
+    const a=data.find((note)=>note.title===title)
+    if(a===undefined){
+        console.log(chalk.red('no note with',a.title,'found'))
+    }
+    else{
+        console.log(chalk.green("found",a.title,a.body))
+    }
+}
 
 module.exports={
     getNotes:getNotes,
     addNotes:addNotes,
     removeNotes:removeNotes,
-    listNotes:listNotes
+    listNotes:listNotes,
+    readNote:readNote
 };
