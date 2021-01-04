@@ -6,8 +6,9 @@ const addNotes=(title,body)=>{
     // console.log(title)
     // console.log(body)
     const notes=loadNotes();
-    const duplicate=notes.filter((note)=>note.title===title)
-    if (duplicate.length===0){
+    // const duplicate=notes.filter((note)=>note.title===title)
+    const duplicate=notes.find((note)=>note.title===title)
+    if (!duplicate.length===0){
         notes.push({
             title: title,
             body: body
@@ -40,7 +41,7 @@ const savenotes=(notes)=>{
 const removeNotes=(title)=>{
     // console.log(title);
     const data=loadNotes();
-    const notestokeep=data.filter((note)=>{
+    const notestokeep=data.filter((note)=> {
         if (note.title ===title){
             return false;
         }
@@ -56,9 +57,18 @@ const removeNotes=(title)=>{
     savenotes(notestokeep);
     // console.log("removed!!!")
 }
+const listNotes=()=>{
+    const data=loadNotes();
+    // console.log(data);
+    console.log(chalk.white.bgCyan('your notes'))
+    data.forEach((note)=>{
+        console.log(chalk.inverse(note.title))
+    })
+}
 
 module.exports={
     getNotes:getNotes,
     addNotes:addNotes,
-    removeNotes:removeNotes
+    removeNotes:removeNotes,
+    listNotes:listNotes
 };
