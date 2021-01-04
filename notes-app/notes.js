@@ -1,4 +1,5 @@
 const fs=require('fs');
+const chalk=require('chalk');
 const getNotes=function(){
     return "Your notes...";
 }
@@ -51,10 +52,10 @@ const removeNotes=function(title){
         }
     })
     if (notestokeep.length ===data.length){
-        console.log('no notes with',title,'found');
+        console.log(chalk.red.bgCyanBright('no notes with',title,'found'));
     }
     else{
-        console.log('removed note with',title)}
+        console.log(chalk.green('removed note with',title))}
     savenotes(notestokeep);
     // console.log("removed!!!")
 }
