@@ -10,6 +10,7 @@ const yargs=require('yargs');
 yargs.version('1.1.0');
 // const validator=require('validator');
 const chalk=require('chalk');
+const { argv } = require('process');
 console.log(a());
 // console.log(validator.isEmail('g@gilom.'));
 // console.log(validator.isURL('oglcom'));
@@ -36,8 +37,15 @@ console.log(chalk.green('success!!'));
 yargs.command({
     command: 'add',
     describe: 'add a new note',
+    builder: {
+        title: {
+            describe:'Notes title',
+            demandOption:true,
+            type:'string'
+        }
+    },
     handler: function(){
-        console.log('adding a new note')
+        console.log('adding a new note',argv)
     }
 })
 //remove command
