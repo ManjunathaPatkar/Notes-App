@@ -16,11 +16,11 @@ const addNotes=function(title,body){
             body: body
         })
         savenotes(notes)
-        console.log('new note added')
+        console.log(chalk.green('new note added'))
 
     }
     else{
-        console.log('note title taken')
+        console.log(chalk.red('note title taken'))
     }
     // console.log(notes)
     
