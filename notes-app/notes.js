@@ -40,7 +40,23 @@ const savenotes=function(notes){
     fs.writeFileSync('notes.json',newdata)
     }
 const removeNotes=function(title){
-    console.log(title);
+    // console.log(title);
+    const data=loadNotes();
+    const notestokeep=data.filter(function(note){
+        if (note.title ===title){
+            return false;
+        }
+        else{
+            return true
+        }
+    })
+    if (notestokeep.length ===data.length){
+        console.log('no notes with',title,'found');
+    }
+    else{
+        console.log('removed note with',title)}
+    savenotes(notestokeep);
+    // console.log("removed!!!")
 }
 
 module.exports={
