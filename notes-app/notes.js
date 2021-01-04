@@ -1,4 +1,11 @@
 const getNotes=function(){
     return "Your notes...";
 }
-module.exports=getNotes;
+const addNotes=function(title,body){
+    console.log(title)
+    console.log(body)
+}
+module.exports={
+    getNotes:getNotes,
+    addNotes:addNotes
+};

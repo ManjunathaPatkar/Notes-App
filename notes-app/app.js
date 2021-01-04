@@ -3,7 +3,7 @@
 // fs.appendFileSync('notes.txt','now i am appending to this file using appendfile method of file system\n');
 // fs.appendFileSync('notes.txt','Actua;;y i can append as many times i want\n');
 // fs.appendFileSync('notes.txt','Each time i append new file wont be created and existing data wont be overridden\n');
-const a=require('./notes');
+const notes=require('./notes');
 const fs=require('fs');
 const yargs=require('yargs');
 //customize args version from 1.0.0 to 1.1.0
@@ -11,7 +11,7 @@ yargs.version('1.1.0');
 // const validator=require('validator');
 const chalk=require('chalk');
 const { argv } = require('process');
-console.log(a());
+console.log(notes.getNotes());
 // console.log(validator.isEmail('g@gilom.'));
 // console.log(validator.isURL('oglcom'));
 console.log(chalk.green('success!!'));
@@ -50,9 +50,10 @@ yargs.command({
         }
     },
     handler: function(argv){
-        console.log('adding a new note',argv);
-        console.log('Title',argv.title);
-        console.log('Body',argv.body);
+        // console.log('adding a new note',argv);
+        // console.log('Title',argv.title);
+        // console.log('Body',argv.body);
+        notes.addNotes(argv.title,argv.body);
     }
 })
 //remove command
