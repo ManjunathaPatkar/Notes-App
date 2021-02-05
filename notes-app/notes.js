@@ -8,7 +8,7 @@ const addNotes=(title,body)=>{
     const notes=loadNotes();
     // const duplicate=notes.filter((note)=>note.title===title)
     const duplicate=notes.find((note)=>note.title===title)
-    if (!duplicate.length===0){
+    if (duplicate===undefined){
         notes.push({
             title: title,
             body: body
@@ -68,8 +68,9 @@ const listNotes=()=>{
 const readNote=(title)=>{
     const data=loadNotes();
     const a=data.find((note)=>note.title===title)
+    // console.log(a)
     if(a===undefined){
-        console.log(chalk.red('no note with',a.title,'found'))
+        console.log(chalk.red('no note with',title,'found'))
     }
     else{
         console.log(chalk.green("found",a.title,a.body))
