@@ -6,6 +6,7 @@ const addNotes=(title,body)=>{
     // console.log(title)
     // console.log(body)
     const notes=loadNotes();
+    debugger
     // const duplicate=notes.filter((note)=>note.title===title)
     const duplicate=notes.find((note)=>note.title===title)
     if (duplicate===undefined){
